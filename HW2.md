@@ -1,7 +1,7 @@
 # HW2
 ## Exercise 1.2
 ### 6
-6.You can upgrade your operating system if and only if you have a 32-bit processor running at 1GHz or faster, at least 1GB of memory, and 16GB of available hard disk space, or a 64-bit processor running at 2GHz or faster, at least 2GB of memory, and at least 32GB of available hard disk space. Express your answer using the following propositions:
+6.You can upgrade your operating system **if and only if** you have a 32-bit processor running at 1GHz or faster, at least 1GB of memory, and 16GB of available hard disk space, or a 64-bit processor running at 2GHz or faster, at least 2GB of memory, and at least 32GB of available hard disk space. Express your answer using the following propositions:
 
 $u$: "You can upgrade your operating system"
 $b_{32}$: "You have a 32-bit processor"
@@ -15,7 +15,7 @@ $h_{32}$: "You have at least 32GB of available hard disk space"
 
 ### answer
 
-$ {(b_{32} \land g_1 \land r_1 \land h_{16}) \lor (b_{64} \land g_2 \land r_2 \land h_{32})} \implies u$ 
+$ {(b_{32} \land g_1 \land r_1 \land h_{16}) \lor (b_{64} \land g_2 \land r_2 \land h_{32})} \iff u$ 
 
 ---
 ### 8
@@ -40,9 +40,13 @@ paid the subscription fee, then access is granted."
 
 - a) $r \land \neg p$
 - b) $(r \land p) \implies q$
-- c) $\neg r \implies q$
+- c) $\neg r \implies \neg q$
 - d) $(r \land \neg p) \implies q$
 ---
+
+## Exercise 1.3
+
+### 10
 
 10.Are these system specifications consistent? "Whenever
 the system software is being upgraded, users cannot ac-
@@ -57,12 +61,12 @@ we assume that
 - $r$: user can save new files.
 
 we know that:
-- $ p \implies q $
+- $ p \implies \neg q $
 - $ q \implies r $
-- $ r \implies \neg p $
+- $ \neg r \implies \neg p $
 
 then:
-- $ ((p \implies q) \land (q \implies r) \land (r \implies \neg p)) \implies ( p \implies \neg p)$
+- $ ((p \implies \neg q) \land (q \implies r) \land (\neg r \implies \neg p)) \implies ( p \implies \neg p)$
 
 then:
 $ \neg p \land p$
@@ -108,6 +112,10 @@ she figure out who wanted coffee?
 - Because $u$ is false, $p_3$ is false.
 - so the first and second want coffee, the last professor doesn't want coffee.
 
+---
+
+### 37
+
 37.Steve would like to determine the relative salaries of three
 coworkers using two facts. 
 - First, he knows that if Fred is not the highest paid of the three, then Janice is. 
@@ -150,6 +158,10 @@ Done.
 Case3: $q_2$ and $p_2$ are both false.
 then from $collary_1$ and $collary_2$, $p_1$ and $p_3$ are true.
 violate the $axiom_4$
+
+---
+
+### 45
 
 
 45.Find the output of each of these combinatorial circuits.
@@ -215,7 +227,9 @@ b) $(p \land q) \land r \equiv p \land (q \land r)$
 | F | T | F | F | F |
 | F | F | F | F | F |
 
+---
 
+###
 
 12.Show that each of these conditional statements is a tautology by using truth tables.
 a) $[\neg p \land (p \lor q)] \implies q$
@@ -225,33 +239,204 @@ d) $[(p \lor q) \land (p \implies r) \land (q \implies r)] \implies r$
 
 - a)
 
-| $p$ | $q$ | $\neg p$ | $p \lor q$ | $[\neg p \land (p \lor q)] \implies q$ |
-|-----|-----|----------|------------|----------------------------------------|
+| $p$ | $q$ | $\neg p$ | $p \lor q$ | $[\neg p \land (p \lor q)]$ | $[\neg p \land (p \lor q)] \implies q$ |
+|---|---|---|---|---|---|
+| T | T | F | T | F | T |
+| T | F | F | T | F | T |
+| F | T | T | T | T | T |
+| F | F | T | F | F | T |
 
+so $[\neg p \land (p \lor q)] \implies q$ is a tautology.
+
+- b)
+
+| $p$ | $q$ | $r$ | $p \implies q$ | $q \implies r$ | $p \implies r$ | $(p \implies q) \land (q \implies r)$ | $[(p \implies q) \land (q \implies r) \implies p] \implies r$ |
+|---|---|---|---|---|---|---|---|
+| T | T | T | T | T | T | T | T |
+| T | F | T | F | T | F | T | T |
+| F | T | T | T | T | T | T | T |
+| F | F | T | T | T | T | T | T |
+| T | T | F | T | F | F | F | T |
+| T | F | F | F | T | F | F | T |
+| F | T | F | T | T | F | F | T |
+| F | F | F | T | T | T | T | T |
+
+so $[(p \implies q) \land (q \implies r)] \implies (p \implies r)$ is a tautology.
+
+- c)
+
+| $p$ | $q$ | $p \implies q$ | $p \land (p \implies q)$ | $[p \land (p \implies q)] \implies q$ |
+|---|---|---|---|---|
+| T | T | T | T | T |
+| T | F | F | F | T |
+| F | T | T | F | T |
+| F | F | T | F | T |
+
+so $[p \land (p \implies q)] \implies q$ is a tautology.
+
+- d)
+
+| $p$ | $q$ | $r$ | $p \lor q$ | $p \implies r$ | $q \implies r$ | $(p \lor q) \land (p \implies r) \land (q \implies r)$ | $[(p \lor q) \land (p \implies r) \land (q \implies r)] \implies r$ |
+|---|---|---|---|---|---|---|---|
+| T | T | T | T | T | T | T | T |
+| T | T | F | T | F | F | F | T |
+| T | F | T | T | T | T | T | T |
+| T | F | F | T | F | T | F | T |
+| F | T | T | T | T | T | T | T |
+| F | T | F | T | T | F | F | T |
+| F | F | T | F | T | T | F | T |
+| F | F | F | F | T | T | F | T |
+
+so $[(p \lor q) \land (p \implies r) \land (q \implies r)] \implies r$ is a tautology.
+
+---
 
 24.Show that $\neg(p \oplus q)$ and $p \iff q$ are logically equivalent
 
+Pf: by truth table.
+
+- $\neg(p \oplus q)$
+
+| $p$ | $q$ | $p \oplus q$ | $\neg (p \oplus q)$ |
+|---|---|---|---|
+| T | T | F | T |
+| T | F | T | F |
+| F | T | T | F |
+| F | F | F | T |
+
+- $p \iff q$
+
+| $p$ | $q$ | $p \implies q$ | $q \implies p$ | $p \iff q$ |
+|---|---|---|---|---|
+| T | T | T | T | T |
+| T | F | F | T | F |
+| F | T | T | F | F |
+| F | F | T | T | T |
+
+so $\neg(p \oplus q)$ and $p \iff q$ are logically equivalent.
+
+---
+### 28
+
 28.Show that $(p \implies q) \lor (p \implies r)$ and $p \implies (q \lor r)$ are logically equivalent.
+
+### answer
+
+- $(p \implies q) \lor (p \implies r)$
+
+$$
+(p \implies q) \lor (p \implies r)  \equiv p \implies (q \lor r)
+                                    \equiv (\neg p \lor q) \lor (\neg p \lor r)
+                                    \equiv \neg p \lor q \lor r                  
+$$
+
+- $p \implies (q \lor r)$
+
+$$
+p \implies (q \lor r) \equiv \neg p \lor q \lor r
+$$
+
+Consequently $(p \implies q) \lor (p \implies r)$ and $p \implies (q \lor r)$ are logically equivalent.
+
+---
+### 31
 
 31.Show that $p \leftrightarrow q$ and $(p \implies q) \land (q \implies p)$ are logically equivalent.
 
+$p \leftrightarrow q \equiv (p \implies q) \land (q \implies p)$
+
+### answer
+
+Pf: by truth table
+
+
+| $p$ | $q$ | $p \implies q$ | $q \implies p$ | $p \leftrightarrow q$ | $(p \implies q) \land (q \implies p)$ |
+|---|---|---|---|---|---|
+| T | T | T | T | T | T |
+| T | F | F | T | F | F |
+| F | T | T | F | F | F |
+| F | F | T | T | T | T |
+
+so $p \leftrightarrow q$ and $(p \implies q) \land (q \implies p)$ are logically equivalent.
+
+
+---
+
+### 36
+
 36.Show that $(p \land q) \implies r$ and $(p \implies r) \land (q \implies r)$ are not logically equivalent.
 
-38.Find the dual of each of these compound propositions.
-a) $p \lor \neg q$ b) $p \land (q \lor (r \land T))$
-c) $(p \land \neg q) \lor (q \land F)$
+$(p \land q) \implies r \not\equiv (p \implies r) \land (q \implies r)$
 
-66.Determine whether each of these compound propositions
-is satisfiable.
-a) $(p \lor q \lor \neg r) \land (p \lor \neg q \lor \neg s) \land (p \lor \neg r \lor \neg s) \land
+### answer
+
+Notice that when $p$ is true, $q$ is false and $r$ is false.
+
+- $(p \land q) \implies r$ is true.
+- $(p \implies r) \land (q \implies r)$ is false.
+
+So $(p \land q) \implies r \not\equiv (p \implies r) \land (q \implies r)$.
+
+---
+
+### 38
+
+38.Find the dual of each of these compound propositions.
+- a) $p \lor \neg q$ 
+- b) $p \land (q \lor (r \land T))$
+- c) $(p \land \neg q) \lor (q \land F)$
+
+### answer
+
+- a) $p \land \neg q$
+- b) $p \lor (q \land (r \lor F))$
+- c) $(p \lor \neg q) \land (q \lor T)$
+
+---
+
+### 66
+
+66.Determine whether each of these compound propositions is satisfiable.
+
+- a) $(p \lor q \lor \neg r) \land (p \lor \neg q \lor \neg s) \land (p \lor \neg r \lor \neg s) \land
 (\neg p \lor \neg q \lor \neg s) \land (p \lor q \lor \neg s)$
-b) $(\neg p \lor \neg q \lor r) \land (\neg p \lor q \lor \neg s) \land (p \lor \neg q \lor \neg s) \land
+- b) $(\neg p \lor \neg q \lor r) \land (\neg p \lor q \lor \neg s) \land (p \lor \neg q \lor \neg s) \land
 (\neg p \lor \neg r \lor \neg s) \land (p \lor q \lor \neg r) \land (p \lor \neg r \lor \neg s)$
-c) $(p \lor q \lor r) \land (p \lor \neg q \lor \neg s) \land (q \lor \neg r \lor s) \land (\neg p \lor
+- c) $(p \lor q \lor r) \land (p \lor \neg q \lor \neg s) \land (q \lor \neg r \lor s) \land (\neg p \lor
 r \lor s) \land (\neg p \lor q \lor \neg s) \land (p \lor \neg q \lor \neg r) \land (\neg p \lor
 \neg q \lor s) \land (\neg p \lor \neg r \lor \neg s)$
 
-71.Explain the steps in the construction of the com-
-pound proposition given in the text that asserts that
-every column of a 9 × 9 Sudoku puzzle contains
-every number.
+### answer
+
+- a) when $p$ is true, $q$ is false and $r$ is false, the proposition is true. So the propostion is satisfiable.
+- b) when $p$ is false, $q$ is true, $r$ is true and $s$ is false, the proposition is true. So the propostion is satisfiable.
+- c) when $p$ is true, $q$ is true, $r$ is false and $s$ is true, the proposition is true. So the propostion is satisfiable.
+
+---
+### 71
+
+71.Explain the steps in the construction of the compound proposition given in the text that asserts that every column of a 9 × 9 Sudoku puzzle contains every number.
+
+### answer
+
+- define a variant $x_{r,c,n}$
+    - $x_{r,c,n}$ is **true** if the number $n$ is in row $r$ and column $c$.
+    - $x_{r,c,n}$ is **false** if the number $n$ is **not** in row $r$ and column $c$.
+
+- for each column, any number $n_i$ must appear.
+    - $$
+        \forall n \in {1, 2, ..., 9}, 
+        \forall c \in {1, 2, ..., 9}, \\
+        \bigvee_{r=1}^{9} x_{r,c,n}
+    $$
+
+- for each column, any number $n_i$ don't appear more than once.
+    - $$
+        \forall n \in {1, 2, ..., 9}, 
+        \forall c \in {1, 2, ..., 9}, 
+        \forall r_1,r_2 \in {1, 2, ..., 9}, r_1 \neq r_2, \\
+        \neg (x_{r_1,c,n} \land x_{r_2 ,c,n})
+    $$
+​
+
+
