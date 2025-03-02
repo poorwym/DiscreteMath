@@ -128,22 +128,106 @@ Is it possible to determine the relative salaries of Fred, Maggie, and Janice fr
     - $axiom_1$ : $\neg p_1 \implies p_2$
     - $axiom_2$ : $\neg q_2 \implies p_3$
     - $axiom_3$ : $\neg(p_1 \land q_1) \land \neg(p_2 \land q_2) \land \neg(p_3 \land q_3)$
+    - $axiom_4$ : $(p_1 \lor p_2 \lor p_3) \land \neg(p_1 \land p_2) \land \neg(p_2 \land p_3) \land \neg(p_1 \land p_3)$
+    - $axiom_5$ : $(q_1 \lor q_2 \lor q_3) \land \neg(q_1 \land q_2) \land \neg(q_2 \land q_3) \land \neg(q_1 \land q_3)$
+
+- From $axiom_1$ , we know that: $ p_1 \lor p_2$  ($collary_1$)
+- From $axiom_2$ , we know that: $ q_2 \lor p_3$  ($collary_2$)
+- From $axiom_3$ , we know that: $ \neg (p_2 \land q_2) $  ($collary_3$)
+
+Case1: $p_2$ is true.
+then from $collary_3$, $q_2$ is false.
+then from $collary_2$, $p_3$ is true.
+then from $axiom_4$, $p_1$ and $p_2$ are false.
+We can't know who is the least paid one.
+
+Case2: $q_2$ is true.
+then from $collary_3$, $p_2$ is false.
+then from $collary_2$, $p_1$ is true.
+then from $axiom_4$ and $axiom_5$, $p_2$ $p_3$ $q_1$ $q_3$ are false.
+Done.
+
+Case3: $q_2$ and $p_2$ are both false.
+then from $collary_1$ and $collary_2$, $p_1$ and $p_3$ are true.
+violate the $axiom_4$
+
 
 45.Find the output of each of these combinatorial circuits.
 ![Combinatorial Circuit a](./pictures/HW2_pic1.png)
 
+- a)
+$\neg(p \land (q \lor \neg r))$
+
+- b)
+$(\neg p \land \neg q) \lor (p \land r)$
 ## Exercises 1.3
 
 4.Use truth tables to verify the associative laws
 a) $(p \lor q) \lor r \equiv p \lor (q \lor r)$.
 b) $(p \land q) \land r \equiv p \land (q \land r)$
 
-12.Show that each of these conditional statements is a tau-
-tology by using truth tables.
+### answer
+- a)
+
+| $p$ | $q$ | $p \lor q$ | $r$ | $(p \lor q) \lor r$|
+|-----|-----|------------|-----|--------------------|
+| T | T | T | T | T |
+| T | F | T | T | T |
+| F | T | T | T | T |
+| F | F | F | T | T |
+| T | T | T | F | T |
+| T | F | T | F | T |
+| F | T | T | F | T |
+| F | F | F | F | F |
+
+| $p$ | $q$ | $r$ | $q \lor r$ | $p \lor (q \lor r)$|
+|-----|-----|------------|-----|--------------------|
+| T | T | T | T | T |
+| T | F | T | T | T |
+| F | T | T | T | T |
+| F | F | T | T | T |
+| T | T | F | T | T |
+| T | F | F | F | T |
+| F | T | F | T | T |
+| F | F | F | F | F |
+
+- b)
+
+| $p$ | $q$ | $p \land q$ | $r$ | $(p \land q) \land r$|
+|-----|-----|-------------|-----|--------------------|
+| T | T | T | T | T |
+| T | F | F | T | F |
+| F | T | F | T | F |
+| F | F | F | T | F |
+| T | T | T | F | F |
+| T | F | F | F | F |
+| F | T | F | F | F |
+| F | F | F | F | F |
+
+| $p$ | $q$ | $r$ | $q \land r$ | $p \land (q \land r)$|
+|-----|-----|-----|-------------|---------------------|
+| T | T | T | T | T |
+| T | F | T | F | F |
+| F | T | T | T | F |
+| F | F | T | F | F |
+| T | T | F | F | F |
+| T | F | F | F | F |
+| F | T | F | F | F |
+| F | F | F | F | F |
+
+
+
+12.Show that each of these conditional statements is a tautology by using truth tables.
 a) $[\neg p \land (p \lor q)] \implies q$
 b) $[(p \implies q) \land (q \implies r)] \implies (p \implies r)$
 c) $[p \land (p \implies q)] \implies q$
 d) $[(p \lor q) \land (p \implies r) \land (q \implies r)] \implies r$
+
+- a)
+
+| $p$ | $q$ | $\neg p$ | $p \lor q$ | $[\neg p \land (p \lor q)] \implies q$ |
+|-----|-----|----------|------------|----------------------------------------|
+
 
 24.Show that $\neg(p \oplus q)$ and $p \iff q$ are logically equivalent
 
