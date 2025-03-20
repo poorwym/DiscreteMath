@@ -333,6 +333,10 @@ Proof:
 
 ### answer
 
+It's obvious that if we want to use dominoes to fill a connected region, the quantity of square in that region must be even.
 
+So we can remove three square at corner except the most corner one. Then we create a connected region that only has one square. It's impossioble to fill that area.
+
+Q.E.D
 
 ---
