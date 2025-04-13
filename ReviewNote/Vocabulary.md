@@ -1,0 +1,57 @@
+# Vocabulary
+## Proof
+- **Axioms(postulates):** 公理
+- **corllary:** 推论
+- **lemma:** 引理
+- **conjecture:** 猜想
+## Logic
+- **Proposition:** 命题
+- **Propositional Logic：** 命题逻辑
+- **Predicate Logic：** 谓词逻辑
+- **Conjunction (AND)：** 与
+- **Disjunction (OR)：** 或
+- **Negation (NOT)：** 非
+- **Implication：** 蕴含
+- **Biconditional (if and only if)：** 等价
+- **Logical Equivalence：** 逻辑等价
+- **converse:** 逆命题
+- **contrapositive:** 逆否命题
+- **inverse** 否命题
+- **compound proposition** 复合命题
+- **Tautology:** 重言式 (恒为真，无论变元取值如何)
+- **Contradiction:** 矛盾式 (恒为假)
+- **Contingency:** 偶然式 (既非恒真也非恒假，取决于具体变元的真假组合)
+- **Quantifier:** 量词
+- **Universal Quantifier:**: 全称量词
+- **counterexample：** 反例
+- **existential quantifier:** 存在量词
+- **argument:** 论证
+- **valid:** 有效的
+- **premises:** 前提
+- **fallacies:** 谬误
+- **resolution:** 归结法
+- **clause:** 子句
+- **rational** 有理数
+- **irrational** 无理数
+## Set
+- **Set:** 集合
+- **Element:** 元素 
+- **Subset:** 子集
+- **Proper Subset:** 真子集
+- **Empty Set:** 空集
+- **Union:** 并集
+- **Intersection:** 交集
+- **Difference:** 差集
+- **Complement:** 补集
+- **Cartesian Product:** 笛卡尔积
+- **Power Set:** 幂集
+## Functions and Relations
+- **Mapping / Function:** 映射/函数
+- **Injection / One-to-one:** 单射
+- **Surjection / Onto:** 满射
+- **Bijection / One-to-one Correspondence:** 双射
+- **Reflexive:** 自反
+- **Symmetric:** 对称
+- **Transitive:** 传递
+- **Equivalence Relation:** 等价关系
+- **Partial Order:** 偏序关系
