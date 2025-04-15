@@ -45,6 +45,7 @@
 - **Complement:** 补集
 - **Cartesian Product:** 笛卡尔积
 - **Power Set:** 幂集
+- **Cardinity:** 基数
 ## Functions and Relations
 - **Mapping / Function:** 映射/函数
 - **Injection / One-to-one:** 单射
@@ -55,3 +56,30 @@
 - **Transitive:** 传递
 - **Equivalence Relation:** 等价关系
 - **Partial Order:** 偏序关系
+
+## Number Theory
+- **Division:** 整除
+- **Factor/Divisor:** 因子/除数
+- **Multiple:** 倍数
+- **Prime:** 素数/质数
+- **Composite:** 合数
+- **Greatest Common Divisor (GCD):** 最大公约数
+- **Least Common Multiple (LCM):** 最小公倍数
+- **Relatively Prime/Coprime:** 互素/互质
+- **Modulo/Modulus:** 模/模数
+- **Congruence:** 同余
+- **Remainder:** 余数
+- **Quotient:** 商
+- **Euclidean Algorithm:** 欧几里得算法
+- **Diophantine Equation:** 丢番图方程
+- **Factorization:** 因式分解
+- **Prime Factorization:** 质因数分解
+- **Multiplicative Inverse:** 乘法逆元
+- **Euler's Totient Function:** 欧拉函数
+- **Fermat's Little Theorem:** 费马小定理
+- **Chinese Remainder Theorem:** 中国剩余定理
+- **decimal expansion:** 十进制
+- **binary expansion:** 二进制
+- **octal expansion:** 八进制
+- **hexadecimal expansion:** 十六进制
+- 
