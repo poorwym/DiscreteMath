@@ -1,5 +1,4 @@
 # Excercise 1.1
----
 ### 8
 8.Suppose that Smartphone A has 256 MB RAM and
 32 GB ROM, and the resolution of its camera is 8 MP;

@@ -281,7 +281,7 @@ Step1:
 Step2:
 每个可数集与 $\mathbb{N}$ 的子集存在双射，从而所有元素可以看作 $\{(i,j) : i,j\in\mathbb{N}\}$ 的一个子集；
 Step3:
-$\mathbb{N} \times \mathbb{N}$ 可数，则$\mathbb{N} \times \mathbb{N}$的子集可数。
+$\mathbb{N} \times \mathbb{N}$ 可数，则$\mathbb{N} \times \mathbb{N}$的子集可数。（**Cantor Pairing Function**）
 Step4:
 补充说明，此外，对于重复元素可以说明‘并集’的定义中重复不影响集合大小
 因此，可数个可数集的并集是可数的。
